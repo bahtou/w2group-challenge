@@ -1,0 +1,44 @@
+@import 'Styles/fonts.css';
+
+.indice-selection-layout, .select-index, .select-period {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.indice-selection-layout {
+  justify-content: space-evenly;
+}
+
+.select-index, .select-period {
+  width: 34.4rem;
+  padding: 1.6rem;
+  border: 0;
+
+  > .radio-group {
+    margin-left: 3.2rem;
+
+    > .radio-input {
+        position: relative;
+        display: block;
+        padding-left: 3.25rem;
+
+      > label {
+        @include font-medium;
+        font-size: 1.872rem;
+        line-height: 2.8rem;
+
+        > .check-input {
+          position: absolute;
+          width: 2.8rem;
+          height: 2.8rem;
+          margin-left: -3.25rem;
+        }
+      }
+    }
+  }
+}
+
+.radio-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
