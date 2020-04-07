@@ -27,6 +27,11 @@ module.exports = {
   module: {
     rules: [
       {
+        parser: {
+          amd: false
+        }
+      },
+      {
         test: /\.js$/,
         include: jsPaths,
         use: [{

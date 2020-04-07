@@ -1,14 +1,15 @@
 import './rhlConfig';
 
+import 'Styles/fonts.css';
 import 'Styles/normalizer.css';
 import 'Styles/global.css';
 
 import React from 'react';
 import { render } from 'react-dom';
-import Root from './Root.js';
+import LandingPage from './LandingPage';
 
 
 render(
-  <Root />,
+  <LandingPage />,
   document.getElementById('root-entry')
 );

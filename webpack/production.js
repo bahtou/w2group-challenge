@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const cssImport = require('postcss-import');
+const { dashedCssClassName } = require('css-loader-dashed-class-names');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
@@ -31,15 +32,17 @@ module.exports = {
                 mode: 'local',
                 // localIdentName: '[folder]__[local]--[hash:base64:10]',
                 // localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                localIdentName: '[local]:[hash:base64:5]',
+                // localIdentName: '[local]:[hash:base64:5]',
+                localIdentName: '[local]',
+                getLocalIdent: dashedCssClassName,
                 context: path.resolve(__dirname, 'src'),
-                hashPrefix: 'custom-hash'
+                // hashPrefix: 'custom-hash'
                 // getLocalIdent: https://github.com/webpack-contrib/css-loader#getlocalident
                 // localIdentRegExp: https://github.com/webpack-contrib/css-loader#localidentregexp
               },
               sourceMap: true,
               importLoaders: 1,
-              localsConvention: 'camelCase', // https://github.com/webpack-contrib/css-loader#localsconvention
+              localsConvention: 'asIs', // https://github.com/webpack-contrib/css-loader#localsconvention
               onlyLocals: false
             }
           },
@@ -151,7 +154,7 @@ module.exports = {
       hash: true,
       cache: true,
       showErrors: true,
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'auto'
     }),
 
     new CleanWebpackPlugin(),
