@@ -1,3 +1,5 @@
+@import 'Styles/fonts.css';
+
 *,
 *::after,
 *:before {
@@ -12,6 +14,48 @@ html {
 }
 
 body {
+  @include font-regular;
   box-sizing: border-box;
-  background-color: darkcyan;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+h1 {
+  @include font-bold;
+  font-size: 3.2rem;
+  line-height: 4.7rem;
+}
+h2 {
+  @include font-demiBold;
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  margin: 0;
+}
+h3 {
+  @include font-medium;
+  font-size: 1.872rem;
+  line-height: 3.5rem;
+}
+p {
+  @include font-regular;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.ui.table { 
+  border-top: none !important; 
+}
+.ui.table thead tr:first-child > th {
+  position: sticky !important;
+  top: 0;
+  z-index: 2;
+}
+.ui.sortable.table thead th.sorted {
+  background-color: #f9fafb;
+}
+.ui.sortable.table thead th:hover, .ui.sortable.table thead th.sorted:hover {
+  background-color: #f9fafb;
+  color: rgba(0,0,0,.8);
 }

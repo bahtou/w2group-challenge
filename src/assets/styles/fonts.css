@@ -1,0 +1,68 @@
+/* what does it look like? */
+@font-face {
+  font-family: 'Nationale-Regular';
+  src: url(~Fonts/NationaleRegular.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nationale-Medium';
+  src: url(~Fonts/NationaleMedium.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nationale-DemiBold';
+  src: url(~Fonts/NationaleDemiBold.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nationale-Bold';
+  src: url(~Fonts/NationaleBold.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%font-optimizing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin font-regular {
+  @extend %font-optimizing;
+  font-family: 'Nationale-Regular', Lato, 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font-medium {
+  @extend %font-optimizing;
+  font-family: 'Nationale-Medium', Lato, 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font-demiBold {
+  @extend %font-optimizing;
+  font-family: 'Nationale-DemiBold', Lato, 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font-bold {
+  @extend %font-optimizing;
+  font-family: 'Nationale-Bold', Lato, 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
