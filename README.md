@@ -1,5 +1,9 @@
 # W2Group Code Challenge
 
+> `npm install`
+
+> `npm start`
+
 ## Component Hierarchy
 
 The SPA consists of a single ‘page’ with three main components.
